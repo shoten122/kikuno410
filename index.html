@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜久野商店 - 鞄の縫製工場</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Basic reset for image max-width */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800 flex items-center">
+                <!-- 喜久野商店のテキストとKIKUNOのテキスト -->
+                <a href="#hero" class="hover:text-red-600 transition duration-300 flex items-center">
+                    喜久野商店 <span class="ml-2">KIKUNO</span>
+                </a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
+                    <li><a href="#ai-features" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">AI活用</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+        <ul class="flex flex-col items-center space-y-4">
+            <li><a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
+            <li><a href="#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
+            <li><a href="#ai-features" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">AI活用</a></li>
+            <li><a href="#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20 md:py-32 flex items-center justify-center min-h-[60vh]">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x1080/4A5568/FFFFFF?text=Bag+Manufacturing+Factory');"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                お客様の想いを形にする<br>鞄の縫製工場
+            </h2>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in-up delay-200">
+                高品質なバッグの生産、サンプル作成、修理まで一貫して承ります。
+            </p>
+            <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
+                ご相談・お問い合わせ
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">会社概要</h3>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Higashi+Shoji" alt="東 将司" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-gray-700 leading-relaxed text-lg">
+                    <p class="mb-4">
+                        喜久野商店の代表を務めております、<strong class="text-gray-900">東 将司（ヒガシ ショウジ）</strong>と申します。<br>1981年1月22日生まれです。
+                    </p>
+                    <p class="mb-4">
+                        三重県尾鷲市で18歳まで育ち、その後、大阪に出てモード学園に入学しました。モード学園ではファッション基礎コースで1年間、雑貨デザイナーコースで2年間、鞄作りとデザインの基礎を深く学びました。
+                    </p>
+                    <p class="mb-4">
+                        卒業後、<strong>レディースバッグメーカー</strong>に就職し、バッグのサンプルルームに配属され、17年間、鞄作りの技術と知識を磨き続けました。その後、<strong>メンズバッグメーカー</strong>で3年半の経験を積みました。この多様な経験から、<strong>レディースバッグ、メンズバッグ問わず、幅広い種類の鞄に対応できるのが当社の強みです。</strong>
+                    </p>
+                    <p class="mb-4">
+                        長年の夢であった「メーカーになる」という想いを胸に、今はその準備期間として独立し、喜久野商店を立ち上げました。
+                    </p>
+                    <p class="mb-4">
+                        培った技術と情熱で、お客様の多様なニーズにお応えします。
+                    </p>
+                </div>
+            </div>
+            <!-- 社内風景画像を追加 -->
+            <div class="mt-12 text-center">
+                <img src="https://placehold.co/800x500/D1D5DB/4B5563?text=社内風景画像" alt="社内風景画像" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">事業内容</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1: バッグの生産 -->
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">バッグの生産</h4>
+                    <p class="text-gray-600 mb-4">
+                        お客様のブランドやデザインに基づき、高品質な素材と熟練の技術で丁寧にバッグを生産します。**コンピューターミシンを導入しており、これにより、作業のスピード、正確性、そして生産性が飛躍的に向上しています。細部の再現性も高まり、より高品質な製品を提供できます。**小ロットから大ロットまで対応可能です。
+                    </p>
+                    <!-- コンピューターミシンの画像を追加 -->
+                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=コンピューターミシン画像" alt="コンピューターミシン画像" class="w-full h-auto rounded-lg shadow-md mt-4">
+                </div>
+
+                <!-- Service Card 2: サンプル作成 -->
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">サンプル作成</h4>
+                    <p class="text-gray-600">
+                        デザイン画やイメージをもとに、試作サンプルを迅速に作成します。**レザー、ナイロン、リュックサックなど、素材や種類の多様なご要望にも柔軟に対応可能です。**量産前の最終確認や、展示会用のサンプルなどにご活用ください。
+                    </p>
+                </div>
+
+                <!-- Service Card 3: 修理 -->
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">修理</h4>
+                    <p class="text-gray-600">
+                        愛着のあるバッグの修理も承ります。ほつれやパーツの交換はもちろん、**革の補修も可能です。**熟練の職人が一つ一つ丁寧に修理し、長くご愛用いただけるようサポートします。
+                    </p>
+                    <!-- 3Dプリンター製パーツの画像と説明を追加 -->
+                    <p class="text-gray-600 mt-4">
+                        また、**自社内では3Dプリンターを活用し、ミシンパーツの作成なども行い、生産設備の内製化や効率化を進めています。**
+                    </p>
+                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=3Dプリンターパーツ画像" alt="3Dプリンターパーツ画像" class="w-full h-auto rounded-lg shadow-md mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New AI Features Section -->
+    <section id="ai-features" class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">AI活用サービス</h3>
+
+            <!-- Feature 1: バッグデザインアイデア生成 -->
+            <div class="bg-gray-100 rounded-lg shadow-xl p-8 mb-12">
+                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center">バッグデザインアイデア生成</h4>
+                <div class="mb-6">
+                    <label for="designKeywords" class="block text-gray-700 text-lg font-semibold mb-2">デザインのキーワードや要望を入力してください (例: ビジネス向け、軽量、多機能、ユニセックス):</label>
+                    <textarea id="designKeywords" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 h-32" placeholder="例: カジュアルな休日用、キャンバス素材、A4収納可"></textarea>
+                </div>
+                <button id="generateDesignButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    アイデアを生成
+                </button>
+                <div id="designLoading" class="hidden mt-4 text-center text-red-600">生成中...</div>
+                <div id="designOutput" class="mt-8 p-6 bg-white border border-gray-200 rounded-lg min-h-[100px] text-gray-800 leading-relaxed overflow-auto">
+                    <!-- 生成されたデザインアイデアがここに表示されます -->
+                    ここにAIが生成したバッグデザインのアイデアが表示されます。
+                </div>
+            </div>
+
+            <!-- Feature 2: 商品キャッチコピー生成 -->
+            <div class="bg-gray-100 rounded-lg shadow-xl p-8">
+                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center">商品キャッチコピー生成</h4>
+                <div class="mb-6">
+                    <label for="copyDescription" class="block text-gray-700 text-lg font-semibold mb-2">バッグの種類や主な特徴、伝えたい魅力を入力してください (例: 本革ビジネスバッグ、スマート収納、上品、30代男性向け):</label>
+                    <textarea id="copyDescription" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 h-32" placeholder="例: 環境に優しい素材のエコバッグ、大容量、日常使い"></textarea>
+                </div>
+                <button id="generateCopyButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    キャッチコピーを生成
+                </button>
+                <div id="copyLoading" class="hidden mt-4 text-center text-red-600">生成中...</div>
+                <div id="copyOutput" class="mt-8 p-6 bg-white border border-gray-200 rounded-lg min-h-[100px] text-gray-800 leading-relaxed overflow-auto">
+                    <!-- 生成されたキャッチコピーがここに表示されます -->
+                    ここにAIが生成した商品キャッチコピーが表示されます。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h3 class="text-4xl font-extrabold text-gray-800 mb-12">お問い合わせ</h3>
+            <p class="text-lg text-gray-700 mb-8">
+                鞄の生産、サンプル作成、修理に関するご依頼・ご相談など、お気軽にお問い合わせください。
+                お客様のご要望に合わせた最適なソリューションをご提案させていただきます。
+            </p>
+            <div class="bg-gray-50 rounded-lg p-8 shadow-inner">
+                <p class="text-2xl font-bold text-gray-800 mb-4">電話番号</p>
+                <p class="text-3xl font-extrabold text-red-600 mb-8">XXX-XXXX-XXXX</p>
+                <p class="text-2xl font-bold text-gray-800 mb-4">メールアドレス</p>
+                <p class="text-xl text-red-600 break-words">neo102hs2@gmail.com</p>
+            </div>
+            <p class="text-base text-gray-500 mt-8">
+                （お手数ですが、XXX-XXXX-XXXXとinfo@kikuno-shoten.co.jpは仮の連絡先です。実際のご連絡先にご変更ください。）
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 喜久野商店. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gemini API Integration
+        const apiKey = ""; // Canvas will provide this key at runtime
+
+        async function generateContent(prompt, outputElementId, loadingElementId) {
+            const outputDiv = document.getElementById(outputElementId);
+            const loadingDiv = document.getElementById(loadingElementId);
+            outputDiv.textContent = ''; // Clear previous content
+            loadingDiv.classList.remove('hidden'); // Show loading indicator
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputDiv.textContent = text;
+                } else {
+                    outputDiv.textContent = '生成できませんでした。もう一度お試しください。';
+                    console.error('Unexpected API response structure:', result);
+                }
+            } catch (error) {
+                outputDiv.textContent = 'エラーが発生しました。ネットワーク接続を確認してください。';
+                console.error('Error calling Gemini API:', error);
+            } finally {
+                loadingDiv.classList.add('hidden'); // Hide loading indicator
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Design Idea Generator
+            const generateDesignButton = document.getElementById('generateDesignButton');
+            const designKeywordsInput = document.getElementById('designKeywords');
+            if (generateDesignButton) {
+                generateDesignButton.addEventListener('click', () => {
+                    const keywords = designKeywordsInput.value.trim();
+                    if (keywords) {
+                        const prompt = `以下のキーワードに基づいて、新しいバッグのデザインアイデアを提案してください。\n\nキーワード: ${keywords}\n\n提案には、デザインコンセプト、特徴、ターゲット層、おすすめの素材を含めてください。`;
+                        generateContent(prompt, 'designOutput', 'designLoading');
+                    } else {
+                        document.getElementById('designOutput').textContent = 'キーワードを入力してください。';
+                    }
+                });
+            }
+
+            // Marketing Copy Generator
+            const generateCopyButton = document.getElementById('generateCopyButton');
+            const copyDescriptionInput = document.getElementById('copyDescription');
+            if (generateCopyButton) {
+                generateCopyButton.addEventListener('click', () => {
+                    const description = copyDescriptionInput.value.trim();
+                    if (description) {
+                        const prompt = `以下のバッグの情報に基づいて、魅力的な商品キャッチコピーと短い説明文を複数提案してください。\n\n情報: ${description}\n\nターゲット顧客の心に響くような、創造的で具体的な提案をお願いします。`;
+                        generateContent(prompt, 'copyOutput', 'copyLoading');
+                    } else {
+                        document.getElementById('copyOutput').textContent = 'バッグの情報や特徴を入力してください。';
+                    }
+                });
+            }
+
+            // Original mobile menu and scroll logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            window.addEventListener('click', function(event) {
+                if (mobileMenu && mobileMenuButton && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            window.addEventListener('scroll', function() {
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
