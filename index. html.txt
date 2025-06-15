@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜久野商店 - 鞄の縫製工場</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Basic reset for image max-width */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800 flex items-center">
+                <a href="#hero" class="hover:text-red-600 transition duration-300 flex items-center">
+                    喜久野商店 <span class="ml-2">KIKUNO</span>
+                </a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
+                    <li><a href="#ai-features" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">AI活用</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+        <ul class="flex flex-col items-center space-y-4">
+            <li><a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
+            <li><a href="#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
+            <li><a href="#ai-features" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">AI活用</a></li>
+            <li><a href="#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <section id="hero" class="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20 md:py-32 flex items-center justify-center min-h-[60vh]">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x1080/4A5568/FFFFFF?text=Bag+Manufacturing+Factory');"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                お客様の想いを形にする<br>鞄の縫製工場
+            </h2>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in-up delay-200">
+                高品質なバッグの生産、サンプル作成、修理まで一貫して承ります。
+            </p>
+            <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
+                ご相談・お問い合わせ
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">会社概要</h3>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Higashi+Shoji" alt="東 将司" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-gray-700 leading-relaxed text-lg">
+                    <p class="mb-4">
+                        喜久野商店の代表を務めております、<strong class="text-gray-900">東 将司（ヒガシ ショウジ）</strong>と申します。<br>1981年1月22日生まれです。
+                    </p>
+                    <p class="mb-4">
+                        三重県尾鷲市で18歳まで育ち、その後、大阪に出てモード学園に入学しました。モード学園ではファッション基礎コースで1年間、雑貨デザイナーコースで2年間、鞄作りとデザインの基礎を深く学びました。
+                    </p>
+                    <p class="mb-4">
+                        卒業後、<strong>レディースバッグメーカー</strong>に就職し、バッグのサンプルルームに配属され、17年間、鞄作りの技術と知識を磨き続けました。その後、<strong>メンズバッグメーカー</strong>で3年半の経験を積みました。この多様な経験から、<strong>レディースバッグ、メンズバッグ問わず、幅広い種類の鞄に対応できるのが当社の強みです。</strong>
+                    </p>
+                    <p class="mb-4">
+                        長年の夢であった「メーカーになる」という想いを胸に、今はその準備期間として独立し、喜久野商店を立ち上げました。
+                    </p>
+                    <p class="mb-4">
+                        培った技術と情熱で、お客様の多様なニーズにお応えします。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <img src="https://placehold.co/800x500/D1D5DB/4B5563?text=社内風景画像" alt="社内風景画像" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-gray-100 py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">事業内容</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">バッグの生産</h4>
+                    <p class="text-gray-600 mb-4">
+                        お客様のブランドやデザインに基づき、高品質な素材と熟練の技術で丁寧にバッグを生産します。**コンピューターミシンを導入しており、これにより、作業のスピード、正確性、そして生産性が飛躍的に向上しています。細部の再現性も高まり、より高品質な製品を提供できます。**小ロットから大ロットまで対応可能です。
+                    </p>
+                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=コンピューターミシン画像" alt="コンピューターミシン画像" class="w-full h-auto rounded-lg shadow-md mt-4">
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0
