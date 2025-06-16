@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>喜久野商店 - 鞄の縫製工房</title>
+    <title>喜久野商店 - 鞄の縫製工場</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -37,7 +37,6 @@
                 <ul class="flex space-x-6">
                     <li><a href="#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
                     <li><a href="#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
-                    <li><a href="#ai-features" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">AI活用</a></li>
                     <li><a href="#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -55,7 +54,6 @@
         <ul class="flex flex-col items-center space-y-4">
             <li><a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
             <li><a href="#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
-            <li><a href="#ai-features" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">AI活用</a></li>
             <li><a href="#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
         </ul>
     </div>
@@ -65,7 +63,7 @@
         <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x1080/4A5568/FFFFFF?text=Bag+Manufacturing+Factory');"></div>
         <div class="relative z-10 text-center px-4">
             <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-                お客様の想いを形にする<br>鞄の縫製工房
+                お客様の想いを形にする<br>鞄の縫製工場
             </h2>
             <p class="text-lg md:text-xl mb-8 animate-fade-in-up delay-200">
                 高品質なバッグの生産、サンプル作成、修理まで一貫して承ります。
@@ -82,7 +80,7 @@
             <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">会社概要</h3>
             <div class="flex flex-col md:flex-row items-center md:space-x-12">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Higashi+Shoji" alt="東 将司" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    <img src="顔写真.jpg" alt="東 将司" class="rounded-lg shadow-xl w-full h-auto object-cover">
                 </div>
                 <div class="md:w-1/2 text-gray-700 leading-relaxed text-lg">
                     <p class="mb-4">
@@ -105,7 +103,7 @@
             <!-- 社内風景画像を追加 -->
             <div class="mt-12 text-center">
                 <img src="IMG_4609.jpg" alt="社内風景画像" class="w-full h-auto rounded-lg shadow-md">
-                 <p class="text-xl font-semibold mb-4 text-gray-800">工房内風景</p>
+                <p class="text-xl font-semibold mt-4 text-gray-800">工房内風景</p>
             </div>
         </div>
     </section>
@@ -164,47 +162,6 @@
         </div>
     </section>
 
-    <!-- New AI Features Section -->
-    <section id="ai-features" class="bg-white py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">AI活用サービス</h3>
-
-            <!-- Feature 1: バッグデザインアイデア生成 -->
-            <div class="bg-gray-100 rounded-lg shadow-xl p-8 mb-12">
-                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center">バッグデザインアイデア生成</h4>
-                <div class="mb-6">
-                    <label for="designKeywords" class="block text-gray-700 text-lg font-semibold mb-2">デザインのキーワードや要望を入力してください (例: ビジネス向け、軽量、多機能、ユニセックス):</label>
-                    <textarea id="designKeywords" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 h-32" placeholder="例: カジュアルな休日用、キャンバス素材、A4収納可"></textarea>
-                </div>
-                <button id="generateDesignButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    アイデアを生成
-                </button>
-                <div id="designLoading" class="hidden mt-4 text-center text-red-600">生成中...</div>
-                <div id="designOutput" class="mt-8 p-6 bg-white border border-gray-200 rounded-lg min-h-[100px] text-gray-800 leading-relaxed overflow-auto">
-                    <!-- 生成されたデザインアイデアがここに表示されます -->
-                    ここにAIが生成したバッグデザインのアイデアが表示されます。
-                </div>
-            </div>
-
-            <!-- Feature 2: 商品キャッチコピー生成 -->
-            <div class="bg-gray-100 rounded-lg shadow-xl p-8">
-                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center">商品キャッチコピー生成</h4>
-                <div class="mb-6">
-                    <label for="copyDescription" class="block text-gray-700 text-lg font-semibold mb-2">バッグの種類や主な特徴、伝えたい魅力を入力してください (例: 本革ビジネスバッグ、スマート収納、上品、30代男性向け):</label>
-                    <textarea id="copyDescription" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 h-32" placeholder="例: 環境に優しい素材のエコバッグ、大容量、日常使い"></textarea>
-                </div>
-                <button id="generateCopyButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    キャッチコピーを生成
-                </button>
-                <div id="copyLoading" class="hidden mt-4 text-center text-red-600">生成中...</div>
-                <div id="copyOutput" class="mt-8 p-6 bg-white border border-gray-200 rounded-lg min-h-[100px] text-gray-800 leading-relaxed overflow-auto">
-                    <!-- 生成されたキャッチコピーがここに表示されます -->
-                    ここにAIが生成した商品キャッチコピーが表示されます。
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="bg-white py-16 md:py-24">
         <div class="container mx-auto px-4 max-w-3xl text-center">
@@ -233,97 +190,27 @@
     </footer>
 
     <script>
-        // Gemini API Integration
-        const apiKey = ""; // Canvas will provide this key at runtime
+        // NOTE: AI Integration code removed as per user request.
+        // Original mobile menu and scroll logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        async function generateContent(prompt, outputElementId, loadingElementId) {
-            const outputDiv = document.getElementById(outputElementId);
-            const loadingDiv = document.getElementById(loadingElementId);
-            outputDiv.textContent = ''; // Clear previous content
-            loadingDiv.classList.remove('hidden'); // Show loading indicator
-
-            let chatHistory = [];
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-            const payload = { contents: chatHistory };
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    outputDiv.textContent = text;
-                } else {
-                    outputDiv.textContent = '生成できませんでした。もう一度お試しください。';
-                    console.error('Unexpected API response structure:', result);
-                }
-            } catch (error) {
-                outputDiv.textContent = 'エラーが発生しました。ネットワーク接続を確認してください。';
-                console.error('Error calling Gemini API:', error);
-            } finally {
-                loadingDiv.classList.add('hidden'); // Hide loading indicator
-            }
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Design Idea Generator
-            const generateDesignButton = document.getElementById('generateDesignButton');
-            const designKeywordsInput = document.getElementById('designKeywords');
-            if (generateDesignButton) {
-                generateDesignButton.addEventListener('click', () => {
-                    const keywords = designKeywordsInput.value.trim();
-                    if (keywords) {
-                        const prompt = `以下のキーワードに基づいて、新しいバッグのデザインアイデアを提案してください。\n\nキーワード: ${keywords}\n\n提案には、デザインコンセプト、特徴、ターゲット層、おすすめの素材を含めてください。`;
-                        generateContent(prompt, 'designOutput', 'designLoading');
-                    } else {
-                        document.getElementById('designOutput').textContent = 'キーワードを入力してください。';
-                    }
-                });
+        window.addEventListener('click', function(event) {
+            if (mobileMenu && mobileMenuButton && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
             }
+        });
 
-            // Marketing Copy Generator
-            const generateCopyButton = document.getElementById('generateCopyButton');
-            const copyDescriptionInput = document.getElementById('copyDescription');
-            if (generateCopyButton) {
-                generateCopyButton.addEventListener('click', () => {
-                    const description = copyDescriptionInput.value.trim();
-                    if (description) {
-                        const prompt = `以下のバッグの情報に基づいて、魅力的な商品キャッチコピーと短い説明文を複数提案してください。\n\n情報: ${description}\n\nターゲット顧客の心に響くような、創造的で具体的な提案をお願いします。`;
-                        generateContent(prompt, 'copyOutput', 'copyLoading');
-                    } else {
-                        document.getElementById('copyOutput').textContent = 'バッグの情報や特徴を入力してください。';
-                    }
-                });
+        window.addEventListener('scroll', function() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
             }
-
-            // Original mobile menu and scroll logic
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            window.addEventListener('click', function(event) {
-                if (mobileMenu && mobileMenuButton && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            window.addEventListener('scroll', function() {
-                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
         });
     </script>
 </body>
