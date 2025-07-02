@@ -50,6 +50,12 @@
             background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
             z-index: 1; /* Below text, above video */
         }
+        /* Link styling for cards */
+        .service-card-link {
+            display: block; /* Make the entire card clickable */
+            text-decoration: none; /* Remove underline from link */
+            color: inherit; /* Inherit text color */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -154,7 +160,7 @@
             <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">事業内容</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> <!-- グリッドを4列表示に調整 -->
                 <!-- Service Card 1: バッグの生産 -->
-                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                <a href="production.html" class="service-card-link bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
                     <div class="text-red-600 mb-4">
                         <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6"></path>
@@ -166,10 +172,10 @@
                     </p>
                     <!-- コンピューターミシンの画像を追加 -->
                     <img src="CPミシン本体.JPG" alt="コンピューターミシン画像" class="w-full h-auto rounded-lg shadow-md mt-4">
-                </div>
+                </a>
 
                 <!-- Service Card 2: サンプル作成 -->
-                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                <a href="sample.html" class="service-card-link bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
                     <div class="text-red-600 mb-4">
                         <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
@@ -180,10 +186,10 @@
                         デザイン画やイメージをもとに、試作サンプルを迅速に作成します。**レザー、ナイロン、リュックサックなど、素材や種類の多様なご要望にも柔軟に対応可能です。**量産前の最終確認や、展示会用のサンプルなどにご活用ください。
                     </p>
                     <img src="サンプル画像1.jpg" alt="サンプル作成画像" class="w-full h-auto rounded-lg shadow-md mt-4">
-                </div>
+                </a>
 
                 <!-- Service Card 3: 修理 -->
-                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                <a href="repair.html" class="service-card-link bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
                     <div class="text-red-600 mb-4">
                         <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
@@ -194,10 +200,10 @@
                         愛着のあるバッグの修理も承ります。ほつれやパーツの交換はもちろん、**革の補修も可能です。**熟練の職人が一つ一つ丁寧に修理し、長くご愛用いただけるようサポートします。
                     </p>
                     <img src="カシメ打ち風景.JPG" alt="修理関連画像" class="w-full h-auto rounded-lg shadow-md mt-4">
-                </div>
+                </a>
 
                 <!-- Service Card 4: 3Dプリンターの活用 (新しく追加) -->
-                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                <a href="3d_printing.html" class="service-card-link bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
                     <div class="text-red-600 mb-4">
                         <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9-5 9 5v12l-9 5-9-5V6zm9 1.83l6.44 3.73-6.44 3.73-6.44-3.73L12 7.83z"></path>
@@ -208,7 +214,7 @@
                         自社内では3Dプリンターを活用し、ミシンパーツの作成なども行い、生産設備の内製化や効率化を進めています。これにより、細部の再現性も高まり、より高品質な製品を提供できます。
                     </p>
                     <img src="IMG_5238.jpg" alt="3Dプリンター活用画像" class="w-full h-auto rounded-lg shadow-md mt-4"> <!-- 適切な画像パスを設定してください -->
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -225,7 +231,7 @@
                 <p class="text-2xl font-bold text-gray-800 mb-4">電話番号</p>
                 <p class="text-3xl font-extrabold text-red-600 mb-8"><a href="tel:06-6747-9258" class="text-3xl font-extrabold text-red-600 hover:underline">06-6747-9258</a></p>
                 <p class="text-2xl font-bold text-gray-800 mb-4">メールアドレス</p>
-                <p class="text-xl text-red-600 break-words"><a href="mailto:neo102hs2@gmail.com" class="text-xl text-red-600 break-words hover:underline">neo102hs2@gmail.com</a></p> <!-- メールアドレスをリンク化しました -->
+                <p class="text-xl text-red-600 break-words"><a href="mailto:neo102hs2@gmail.com" class="text-xl text-red-600 break-words hover:underline">neo102hs2@gmail.com</a></p>
             </div>
         </div>
     </section>
