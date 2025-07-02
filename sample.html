@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプル作成 - 喜久野商店</title>
+    <link rel="icon" href="KIKUNOロゴ.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #333; }
+        html { scroll-behavior: smooth; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section (共通) -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800 flex items-center">
+                <a href="index.html" class="hover:text-red-600 transition duration-300 flex items-center">
+                    喜久野商店 <span class="ml-2">KIKUNO</span>
+                </a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
+                    <li><a href="index.html#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
+                    <li><a href="index.html#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (共通) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+        <ul class="flex flex-col items-center space-y-4">
+            <li><a href="index.html#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
+            <li><a href="index.html#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
+            <li><a href="index.html#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content for Sample Creation -->
+    <main class="container mx-auto px-4 py-16 md:py-24 max-w-4xl bg-white shadow-lg rounded-lg mt-8 mb-8">
+        <h2 class="text-5xl font-extrabold text-gray-800 text-center mb-12 border-b-2 border-red-600 pb-4">サンプル作成</h2>
+        <div class="text-gray-700 leading-relaxed text-lg">
+            <p class="mb-6">
+                お客様のアイデアやデザイン画を、具体的な形にするための重要なステップがサンプル作成です。喜久野商店では、お客様のイメージを正確に捉え、迅速かつ丁寧に試作サンプルを制作いたします。
+            </p>
+            <div class="mb-6 text-center">
+                <img src="サンプル画像1.jpg" alt="サンプル作成の様子" class="rounded-lg shadow-md w-full md:w-3/4 inline-block">
+                <p class="text-sm text-gray-500 mt-2">デザインを形にするサンプル制作</p>
+            </div>
+            <p class="mb-6">
+                **レザー、ナイロン、リュックサックなど、素材や種類の多様なご要望にも柔軟に対応可能です。** 経験豊富な職人が、素材の特性を最大限に活かし、デザインの意図を忠実に再現します。量産に入る前の最終確認はもちろん、展示会や商談用のサンプルとしてもご活用いただけます。
+            </p>
+            <p class="mb-6">
+                お客様との密なコミュニケーションを大切にし、修正や改善にも迅速に対応することで、ご納得いただけるサンプルを完成させます。貴社の製品開発を強力にサポートいたします。
+            </p>
+        </div>
+        <div class="text-center mt-12">
+            <a href="index.html#services" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                事業内容一覧へ戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer Section (共通) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 喜久野商店. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu logic (共通)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        window.addEventListener('click', function(event) {
+            if (mobileMenu && mobileMenuButton && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
