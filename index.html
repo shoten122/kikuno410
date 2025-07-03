@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -56,6 +56,41 @@
             text-decoration: none; /* Remove underline from link */
             color: inherit; /* Inherit text color */
         }
+        /* FAQ accordion styles */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb; /* tailwind gray-200 */
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.25rem; /* text-xl */
+            color: #374151; /* tailwind gray-700 */
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f3f4f6; /* tailwind gray-100 */
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1rem;
+            color: #4b5563; /* tailwind gray-600 */
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+            padding: 1rem;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -72,6 +107,7 @@
                 <ul class="flex space-x-6">
                     <li><a href="#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
                     <li><a href="#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
+                    <li><a href="#faq" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">よくある質問</a></li> <!-- FAQへのリンクを追加 -->
                     <li><a href="#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -89,6 +125,7 @@
         <ul class="flex flex-col items-center space-y-4">
             <li><a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
             <li><a href="#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
+            <li><a href="#faq" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">よくある質問</a></li> <!-- FAQへのリンクを追加 -->
             <li><a href="#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
         </ul>
     </div>
@@ -218,6 +255,134 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-12">よくある質問</h3>
+            <div class="space-y-4">
+                <!-- FAQ Item 1: 裁断作業 -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: 裁断作業は依頼できますか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            はい、自社隣接の裁断職人との連携により、裁断作業も承っております。クリッカー抜き（手裁断）での対応となりますため、大型の裁断は難しい場合がございますが、まずはお気軽にご相談ください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2: どのような種類のバッグの生産に対応していますか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: どのような種類のバッグの生産に対応していますか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            レディースバッグ、メンズバッグ問わず、カジュアルバッグからビジネスバッグまで幅広く対応しております。素材もレザー、ナイロン、帆布など多種多様な素材での生産が可能です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3: 小ロットでの生産は可能ですか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: 小ロットでの生産は可能ですか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            はい、小ロットから大ロットまで柔軟に対応いたします。お客様のニーズに合わせて最適な生産プランをご提案させていただきますので、まずはお気軽にご相談ください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4: サンプル作成のみの依頼も可能ですか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: サンプル作成のみの依頼も可能ですか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            はい、可能です。デザイン画やイメージをもとに、量産前の試作サンプルや展示会用のサンプルなどを迅速かつ丁寧に作成いたします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5: バッグの修理はどのような内容に対応していますか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: バッグの修理はどのような内容に対応していますか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            ほつれ直し、ファスナーや金具などのパーツ交換、革の補修など、幅広い修理に対応しております。熟練の職人が一点一点丁寧に作業し、長くご愛用いただけるようサポートいたします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6: 3Dプリンターはどのように活用されていますか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: 3Dプリンターはどのように活用されていますか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            主にミシンパーツや治具（作業を補助する工具）の作成に活用しています。これにより、生産設備の内製化や効率化を進め、より高品質な製品提供に繋げています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7: 問い合わせから納品までの流れを教えてください。 -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: 問い合わせから納品までの流れを教えてください。</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            まずはお問い合わせフォームまたはお電話・メールにてご要望をお聞かせください。その後、詳細な打ち合わせ、お見積もり、サンプル作成、生産、検品、納品という流れで進めさせていただきます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8: 見積もりは無料ですか？ -->
+                <div class="faq-item rounded-lg shadow-sm overflow-hidden">
+                    <div class="faq-question">
+                        <span>Q: 見積もりは無料ですか？</span>
+                        <svg class="faq-arrow w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="pb-4">
+                            はい、お見積もりは無料で承っております。お気軽にお問い合わせください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="bg-white py-16 md:py-24">
         <div class="container mx-auto px-4 max-w-3xl text-center">
@@ -243,7 +408,7 @@
     </footer>
 
     <script>
-        // Original mobile menu and scroll logic
+        // Mobile menu logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -263,6 +428,14 @@
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
+        });
+
+        // FAQ accordion logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const faqItem = item.closest('.faq-item');
+                faqItem.classList.toggle('active');
+            });
         });
     </script>
 </body>
