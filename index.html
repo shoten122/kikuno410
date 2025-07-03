@@ -9,6 +9,8 @@
     <!-- ファビコンの追加 (ここまで) -->
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Custom font for a clean look */
         body {
@@ -107,7 +109,7 @@
                 <ul class="flex space-x-6">
                     <li><a href="#about" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">会社概要</a></li>
                     <li><a href="#services" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">事業内容</a></li>
-                    <li><a href="#faq" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">よくある質問</a></li> <!-- FAQへのリンクを追加 -->
+                    <li><a href="#faq" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">よくある質問</a></li>
                     <li><a href="#contact" class="text-gray-600 hover:text-red-600 font-semibold transition duration-300">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -125,7 +127,7 @@
         <ul class="flex flex-col items-center space-y-4">
             <li><a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">会社概要</a></li>
             <li><a href="#services" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">事業内容</a></li>
-            <li><a href="#faq" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">よくある質問</a></li> <!-- FAQへのリンクを追加 -->
+            <li><a href="#faq" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">よくある質問</a></li>
             <li><a href="#contact" class="text-gray-800 hover:text-red-600 font-semibold text-lg py-2 block" onclick="document.getElementById('mobile-menu').classList.add('hidden');">お問い合わせ</a></li>
         </ul>
     </div>
@@ -403,6 +405,12 @@
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-6 mb-4">
+                <a href="https://www.instagram.com/kikunoshouten22/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-red-400 transition duration-300">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <!-- 他のSNSリンクを追加する場合はここに記述 -->
+            </div>
             <p>&copy; 2023 喜久野商店. All rights reserved.</p>
         </div>
     </footer>
